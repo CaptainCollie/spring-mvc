@@ -1,12 +1,18 @@
 package web.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class Car {
     private String model;
     private int series;
     private String color;
+
+    public Car () {
+    }
 
     public Car(String model, int series, String color){
         this.model = model;
@@ -14,7 +20,7 @@ public class Car {
         this.color = color;
     }
 
-    public static List<Car> getCarList() {
+    public List<Car> getCarList() {
         List<Car> carList = new ArrayList<>();
         carList.add(new Car("Toyota", 5, "Red"));
         carList.add(new Car("Lexus", 5, "Black"));
